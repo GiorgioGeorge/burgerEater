@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 
+
 //import the burger (yum)
 var burger = require('../models/burger.js');
+
 
 //routes
 router.get('/', function(req, res){
@@ -14,6 +16,7 @@ router.get('/', function(req, res){
     res.render('index', handlebarsObject);
 });
 });
+
 
 router.post('/burgers', function(req, res) {
     burger.insertOne(
@@ -28,6 +31,7 @@ router.post('/burgers', function(req, res) {
     });
   });
 
+
   router.put('/burgers/:id', function(req, res) {
     var condition = 'id = ' + req.params.id;
   //burger eater eats burger
@@ -38,5 +42,5 @@ router.post('/burgers', function(req, res) {
     });
   });
 
+
   module.exports = router;
-  
