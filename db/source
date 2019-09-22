@@ -2,8 +2,11 @@ DROP DATABASE IF EXISTS burgers_db;
 CREATE DATABASE burgers_db;
 USE burgers_db;
 CREATE TABLE burgers(
-    id INT NOT NULL AUTO_INCREMENT,
+    id INT(4) NOT NULL AUTO_INCREMENT,
     burger_name VARCHAR(100) NOT NULL,
     devoured BOOLEAN DEFAULT false,
     PRIMARY KEY (id)
 )
+Select * FROM burgers;
+INSERT INTO burgers(burger_name, devoured)
+VALUES(Big_Kahuna_Burger, 0),(Poblano_Picasso_Burger, 0),(Chekovs_Bun_Burger,0)
